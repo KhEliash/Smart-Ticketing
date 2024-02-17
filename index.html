@@ -1,22 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- tailwind and daisy ui -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
-<script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
 
-<!-- css link -->
-<link rel="stylesheet" href="style.css">
+    <!-- css link -->
+    <link rel="stylesheet" href="style.css" />
 
     <title>Smart Ticketing</title>
-</head>
-<body>
-    <header>
-        
+  </head>
+  <body class=" ">
+    <header class="container mx-auto">
+      <!-- nav bar -->
+      <div class="navbar bg-base-100">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <li><a>Home</a></li>
+              <li><a>About</a></li>
+              <li><a>Destination</a></li>
+
+              <li><a> Search</a></li>
+            </ul>
+          </div>
+          <a class="btn btn-ghost text-xl font-bold lg:text-4xl">E-Ticket </a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li><a>Home</a></li>
+            <li><a>About</a></li>
+            <li><a>Destination</a></li>
+            <li><a>Search</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <a
+            class="btn bg-[#1DD1001A] border-[#1cd10038] text-green-500 font-bold"
+            >Bus <span><img src="images/bus-icon.png" alt="" /></span
+          ></a>
+        </div>
+      </div>
+      <!-- banner section -->
+      <div class="relative ">
+        <div>
+          <img class="w-full h-72 lg:h-auto bg-cover" src="images/banner.png" alt="" />
+        </div>
+
+        <div class="banner-text absolute top-0 w-full">
+          <div class="flex flex-col items-center lg:space-y-7 lg:mt-24">
+            <h1 class="text-white text-center font-extrabold text-3xl lg:text-6xl">
+              End-to-End Travel with
+            </h1>
+            <h1 class="text-[#1DD100] font-extrabold text-3xl lg:text-6xl">E Paribahan</h1>
+            <p class="text-white text-center">
+              Yes, you can buy tickets and view the results directly within the
+              app. The <br />
+              integrated testing features allow for a streamlined .
+            </p>
+            <button class="btn bg-green-500 border-none font-bold">
+              Buy Tickets
+            </button>
+          </div>
+        </div>
+      </div>
     </header>
+    <main class="container mx-auto">
+        <!-- best offer section -->
+        <section class="best-offer mt-28  ">
+            <h2 class="text-center text-2xl font-bold mb-10">Best offers for you</h2>
+
+            <div class="flex flex-col lg:flex-row gap-6 w-full  ">
+                <div class=" h-56 bg-[#FFBF0F] rounded-2xl flex gap-0 lg:gap-16 items-center justify-center w-full">
+                   <div class="text-left">
+                     <h2 class="text-4xl font-bold">15% OFF</h2>
+                    <h3 class="font-bold">on your next purchase</h3>
+                    <h3 class="text-2xl text-gray-500">use by January 2024</h3>
+                </div>
+                <img src="images/cupon-devider.png" alt="">
+                    <div class="text-center">
+                        <h1 class="text-4xl font-bold">NEW15</h1>
+                        <p class="text-2xl text-gray-500">Coupon Code</p>
+                    </div>
+                </div>
+
+<!-- card tow -->
+                <div class=" h-56 bg-[#F78C9C] rounded-2xl flex gap-0 lg:gap-16 items-center justify-center w-full">
+                   <div class="text-left">
+                     <h2 class="text-4xl font-extrabold">20 % OFF</h2>
+                    <h3 class="font-bold">on your next purchase</h3>
+                    <h3 class="text-2xl text-gray-500">use by January 2024</h3>
+                </div>
+                <img src="images/cupon-devider.png" alt="">
+                    <div class="text-center">
+                        <h1 class="text-4xl font-bold">Couple 20</h1>
+                        <p class="text-2xl text-gray-500">Coupon Code</p>
+                    </div>
+                </div>
+            </div>
+           <div class="w-full text-center my-14">
+            <button class="btn text-green-500 bg-white border-green-500 font-bold ">See All Offers</button>
+           </div>
+        </section>
+    </main>
     <script src="ticket.js"></script>
-</body>
+  </body>
 </html>
